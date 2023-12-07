@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+    <head>
+     <title>Socket.io</title>
+    </head>
+    <body>
+        <script src="/socket.io/socket.io.js"></script>
+        <h1>HEllo</h1>
+        <script>
+                var socket=io();
+                // socket.on('message',function(data)
+                // {
+                // document.writeln(data);
+                // })
+
+                //   socket.on('myCustoEvent',function(data)
+                //   {
+                //      document.writeln(data.description)
+                //   })
+                  socket.emit('mycustomEventFromClientSide','i am from client side')
+
+                  socket.on('broadcast',(data)=>{
+                    document.write(data.message);
+
+                  })
+                
+
+
+         // var socket = io(/custom-namespace);
+        //   document.write("kumarr");
+        //   socket.emit('mycustomEventFromClientSide','i am from client side')
+        // //  socket.on('message',function(data)
+        //  {
+        //   document.writeln(data);
+        //  })
+        //  socket.on('myCustoEvent',function(data)
+        //  {
+        //   document.write(data.description)
+        //  })
+
+
+        // socket.on("newuserconnect",function(data)
+        // {
+          
+        //   document.write(data.message);
+        // })
+
+
+        //  socket.on('testEvent',function(data)
+        //  {
+        //         document.body.innerHTML='';
+        //         document.write(data);
+        //  })
+
+
+
+        // var socket = io("/custom-namespace");
+        //  socket.on('customEvent',function(data)
+        //  {
+        //   document.body.innerHTML='';
+        //   document.write(data);
+        //  })
+
+        // var socket=io();
+        // socket.on('news', function (data) {
+            
+        //     document.write(data.hello)
+        // })
+        // socket.on('connectedRoom',function(data)
+        // {
+        //   document.body.innerHTML='';
+        //   document.write(data)
+        // })
+
+    //     var socket = io();
+    //   socket.on('connectToRoom',function(data){
+    //      document.body.innerHTML = '';
+    //      document.write(data);
+    //   });
+        
+
+
+
+
+         
+          </script>
+    
+    </body>
+</html>
